@@ -1,0 +1,111 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-auto-rows: 60px;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tile {
+  background-color: #f2f2f2;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tile:hover {
+  background-color: #d0ebff;
+}
+
+.tile.selected {
+  background-color: #a5d6a7;
+  border-color: #388e3c;
+}
+
+.tile.found {
+   background-color: #90caf9;
+   border-color: #42a5f5;
+   color: white;
+   cursor: pointer;
+ }
+
+ .clear-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.2em;
+  line-height: 1;
+  margin-left: 8px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.clear-btn:hover {
+  color: #333;
+}
+
+#submit-button {
+  padding: 0.6em 1.4em;           /* top/bottom, left/right */
+  background-color: #42a5f5;     /* a friendly blue */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-top: 20px;              /* give it some breathing room */
+}
+
+#submit-button:hover {
+  background-color: #1e88e5;
+  transform: translateY(-1px);
+}
+
+#submit-button:active {
+  transform: translateY(1px);
+}
+
+/* Message box */
+#message {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #fff3e0;    /* light peach */
+  color: #e65100;               /* dark orange */
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: center;
+  min-height: 1.2em;            /* reserve space even if empty */
+}
+
+#score-container {
+  margin-top: 0.5em;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* The score “pill” */
+#score {
+  display: inline-block;
+  background-color: #e8f5e9;    /* pale green */
+  color: #1b5e20;               /* dark green */
+  padding: 0.2em 0.8em;
+  border-radius: 12px;
+  font-weight: 600;
+  min-width: 2em;
+}
